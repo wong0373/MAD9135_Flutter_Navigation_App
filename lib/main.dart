@@ -211,6 +211,7 @@ class _ContactPageState extends State<ContactPage> {
                 ),
                 keyboardType: TextInputType.name,
                 textInputAction: TextInputAction.next,
+                style: const TextStyle(color: Colors.black),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Name is required';
@@ -230,14 +231,11 @@ class _ContactPageState extends State<ContactPage> {
                 ),
                 keyboardType: TextInputType.emailAddress,
                 textInputAction: TextInputAction.next,
+                style: const TextStyle(color: Colors.black),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Email is required';
                   }
-                  if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
-                    return 'Enter a valid email address';
-                  }
-                  return null;
                 },
                 onSaved: (value) {
                   _email = value;
@@ -252,6 +250,7 @@ class _ContactPageState extends State<ContactPage> {
                 ),
                 keyboardType: TextInputType.multiline,
                 textInputAction: TextInputAction.newline,
+                style: const TextStyle(color: Colors.black),
                 maxLines: 5,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
