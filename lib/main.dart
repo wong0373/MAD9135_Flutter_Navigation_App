@@ -196,13 +196,7 @@ class _ContactPageState extends State<ContactPage> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'Contact Us',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 16),
               TextFormField(
                 autofocus: true,
                 decoration: const InputDecoration(
@@ -217,7 +211,6 @@ class _ContactPageState extends State<ContactPage> {
                   if (value == null || value.isEmpty) {
                     return 'Name is required';
                   }
-                  return null;
                 },
                 onSaved: (value) {
                   _name = value;
@@ -252,7 +245,7 @@ class _ContactPageState extends State<ContactPage> {
                 keyboardType: TextInputType.multiline,
                 textInputAction: TextInputAction.newline,
                 style: const TextStyle(color: Colors.black),
-                maxLines: 5,
+                maxLines: 3,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Message is required';
