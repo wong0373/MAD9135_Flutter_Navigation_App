@@ -111,6 +111,7 @@ class _DataPageState extends State<DataPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: const Text('Data Page')),
       body: FutureBuilder<List<Product>>(
         future: _data,
         builder: (context, snapshot) {
